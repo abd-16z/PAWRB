@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Form Pendaftaran</h1>
+      <p>Isi data berikut dengan benar.</p>
+    </header>
+
+    <!-- method GET: data dikirim lewat query string ke detail.html -->
+    <form method="get" action="detail.html">
+      <fieldset>
+        <legend>Data Pendaftar</legend>
+
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+        </div>
+
+        <div class="form-group">
+          <label for="nim">NIM</label>
+          <input type="text" id="nim" name="nim" placeholder="Masukkan NIM" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tgl">Tanggal Lahir</label>
+          <input type="date" id="tgl" name="tgl_lahir">
+        </div>
+
+        <div class="form-group">
+          <span class="label-text">Jenis Kelamin</span>
+          <div class="pilihan">
+            <input type="radio" id="laki" name="gender" value="laki-laki" checked>
+            <label for="laki">Laki-laki</label>
+            <input type="radio" id="perempuan" name="gender" value="perempuan">
+            <label for="perempuan">Perempuan</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="prodi">Program Studi</label>
+          <select id="prodi" name="prodi">
+            <option value="">Pilih Program Studi</option>
+            <option value="informatika">Teknik Informatika</option>
+            <option value="industri">Teknik Industri</option>
+            <option value="elektro">Teknik Elektro</option>
+            <option value="mesin">Teknik Mesin</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="alamat">Alamat</label>
+          <textarea id="alamat" name="alamat" rows="3" placeholder="Masukkan alamat"></textarea>
+        </div>
+
+        <button type="submit" id="btn-daftar">Daftar</button>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>
